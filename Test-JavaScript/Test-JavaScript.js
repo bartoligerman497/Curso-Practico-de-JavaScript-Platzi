@@ -196,10 +196,10 @@ imprimirElementos([true, false, true]); // Imprime true, false, true
 
 function imprimirElementos(objeto) {
     for (const propiedad in objeto) {
-      console.log(`${propiedad}: ${objeto[propiedad]}`);
+        console.log(`${propiedad}: ${objeto[propiedad]}`);
     }
-  }
-  
-  imprimirElementos({a: 1, b: 2, c: 3});  // Imprime "a: 1", "b: 2", "c: 3"
-  imprimirElementos({nombre: 'German', apellido: 'Bartoli', edad: 23});  // Imprime "nombre: German", "apellido: Bartoli", "edad: 23"
-  imprimirElementos({});  // No imprime nada
+}
+
+imprimirElementos({ a: 1, b: 2, c: 3 }); // Imprime "a: 1", "b: 2", "c: 3"
+imprimirElementos({ nombre: "German", apellido: "Bartoli", edad: 23 }); // Imprime "nombre: German", "apellido: Bartoli", "edad: 23"
+imprimirElementos({}); // No imprime nada
