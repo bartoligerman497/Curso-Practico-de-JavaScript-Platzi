@@ -80,6 +80,44 @@ const btn = document.querySelector("#btnCalcular");
 const pResult = document.querySelector("#result");
 
 function btnOnClick() {
-    const sumaInputs = input1.value + input2.value;
+    console.log("Escuchando el evento OnClick");
+
+    // Concatenación
+    // const sumaInputs = input1.value + input2.value;
+
+    // Suma
+    const sumaInputs = parseInt(input1.value) + parseInt(input2.value);
+
     pResult.innerText = "Resultado: " + sumaInputs;
+}
+
+// AddEventListener
+
+const input3 = document.querySelector("#calculo3");
+const input4 = document.querySelector("#calculo4");
+const form = document.querySelector("#form");
+const btnCalcularAddEventListener = document.querySelector("#btnCalcularAddEventListener");
+const pResultAddEventListener = document.querySelector("#resultAddEventListener");
+
+// Forma 1
+
+// function OnClick(){
+//     const sumaInputs2 = parseInt(input3.value) + parseInt(input4.value);
+
+//     pResultAddEventListener.innerText = "Resultado: " + sumaInputs2;
+// }
+
+// btnCalcularAddEventListener.addEventListener('click', OnClick) // Sin parentesis porque ya se los pone
+
+// Forma 2
+
+btnCalcularAddEventListener.addEventListener("click", sumarInputValues); // Sin parentesis porque ya se los pone
+
+form.addEventListener("submit", sumarInputValues);
+
+function sumarInputValues(event) {
+    console.log({ event });
+    event.preventDefault();
+    const sumaInputs2 = input3.value + input4.value;
+    pResultAddEventListener.innerText = "Resultado: " + sumaInputs2;
 }
