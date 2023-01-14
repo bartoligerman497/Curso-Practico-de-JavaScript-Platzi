@@ -18,6 +18,8 @@
 
         <p>Esto es un párrafo</p>
 
+        <p>Eventos en JavaScript: interactuando con usuarios</p>
+
         <input
             id="calculo1"
             placeholder="Escribe algo aquí"
@@ -41,12 +43,34 @@
             onchange="console.log('cambio el input')"
             placeholder="OnChange"
         />
-        <button
+        <button onclick="console.log('click en el btn')">Calcular</button>
 
-            onclick="console.log('click en el btn')"
-        >
-            Calcular
-        </button>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <p>AddEventListener</p>
+
+        <form id="form">
+            <input
+                id="calculo3"
+                placeholder="Escribe algo aquí"
+            />
+            <input
+                id="calculo4"
+                placeholder="Escribe algo aquí"
+            />
+            <button
+                type="button"
+                id="btnCalcularAddEventListener"
+            >
+                Calcular
+            </button>
+
+            <p id="resultAddEventListener"></p>
+        </form>
 
         <br />
         <br />
@@ -58,6 +82,9 @@
         <br />
 
         <h1>Manipulación del DOOM Básica</h1>
+
+        <h1>Escribiendo HTML desde JavaScript</h1>
+
         <h1
             class="verde"
             pantalla="platzilg"
