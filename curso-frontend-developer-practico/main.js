@@ -4,10 +4,10 @@ const desktopMenu = document.querySelector(".desktop-menu");
 menuEmail.addEventListener("click", toggleDesktopMenu);
 
 function toggleDesktopMenu() {
-    const isAsideClosed = aside.classList.contains("inactive");
+    const isShoppingCartContainerClosed = shoppingCartContainer.classList.contains("inactive");
 
-    if (!isAsideClosed) {
-        aside.classList.add("inactive");
+    if (!isShoppingCartContainerClosed) {
+        shoppingCartContainer.classList.add("inactive");
     }
 
     desktopMenu.classList.toggle("inactive");
@@ -19,21 +19,21 @@ const mobileMenu = document.querySelector(".mobile-menu");
 menuHamIcon.addEventListener("click", toggleMobileMenu);
 
 function toggleMobileMenu() {
-    const isAsideClosed = aside.classList.contains("inactive");
+    const isShoppingCartContainerClosed = shoppingCartContainer.classList.contains("inactive");
 
-    if (!isAsideClosed) {
-        aside.classList.add("inactive");
+    if (!isShoppingCartContainerClosed) {
+        shoppingCartContainer.classList.add("inactive");
     }
 
     mobileMenu.classList.toggle("inactive");
 }
 
 const menuCarritoIcon = document.querySelector(".navbar-shopping-cart");
-const aside = document.querySelector(".product-detail");
+const shoppingCartContainer = document.querySelector("#shoppingCartContainer");
 
-menuCarritoIcon.addEventListener("click", toggleCarritoAside);
+menuCarritoIcon.addEventListener("click", toggleCarritoShoppingCartContainer);
 
-function toggleCarritoAside() {
+function toggleCarritoShoppingCartContainer() {
     const isMobileMenuClosed = mobileMenu.classList.contains("inactive");
 
     if (!isMobileMenuClosed) {
@@ -46,7 +46,7 @@ function toggleCarritoAside() {
         desktopMenu.classList.add("inactive");
     }
 
-    aside.classList.toggle("inactive");
+    shoppingCartContainer.classList.toggle("inactive");
 }
 
 const cardsContainer = document.querySelector(".cards-container");
@@ -81,7 +81,7 @@ productList.push({
 */
 
 function renderProducts(arr) {
-    for (product of productList) {
+    for (product of arr) {
         const productCard = document.createElement("div");
         productCard.classList.add("product-card");
 
