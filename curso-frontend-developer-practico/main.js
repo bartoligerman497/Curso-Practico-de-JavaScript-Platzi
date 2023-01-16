@@ -92,18 +92,18 @@ productList.push({
 
 const productDetailContainer = document.querySelector("#productDetail");
 
-function openProductDetailAside(){
-    shoppingCartContainer.classList.add("inactive")
+function openProductDetailAside() {
+    shoppingCartContainer.classList.add("inactive");
 
     productDetailContainer.classList.remove("inactive");
 }
 
 const productDetailCloseIcon = document.querySelector(".product-detail-close");
 
-productDetailCloseIcon.addEventListener("click", closeProductDetailAside)
+productDetailCloseIcon.addEventListener("click", closeProductDetailAside);
 
 function closeProductDetailAside() {
-    productDetailContainer.classList.add("inactive")
+    productDetailContainer.classList.add("inactive");
 }
 
 function renderProducts(arr) {
